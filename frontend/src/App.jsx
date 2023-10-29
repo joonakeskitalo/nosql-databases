@@ -26,8 +26,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(`🔥 burgers`, burgers);
-
   return (
     <>
       <h1>Burgers Feed</h1>
