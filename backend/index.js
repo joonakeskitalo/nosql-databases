@@ -11,52 +11,20 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
-// const db = new AceBase("my_db");
+const db = new AceBase("my_db");
+
+const getAllBurgers = async () => {
+  const snapshot = await db.ref("burgers").get();
+  return snapshot.val();
+};
 
 app.get("", (req, res) => {
   return res.send("Burgers API");
 });
 
-app.get("/burgers", (req, res) => {
-  const mockResponse = [
-    {
-      id: "1",
-      name: "Example burger",
-      description: "example description",
-      address: "Example Street 1",
-      website: "examplewebsite.com",
-    },
-    {
-      id: "2",
-      name: "Example burger",
-      description: "example description",
-      address: "Example Street 1",
-      website: "examplewebsite.com",
-    },
-    {
-      id: "3",
-      name: "Example burger",
-      description: "example description",
-      address: "Example Street 1",
-      website: "examplewebsite.com",
-    },
-    {
-      id: "4",
-      name: "Example burger",
-      description: "example description",
-      address: "Example Street 1",
-      website: "examplewebsite.com",
-    },
-    {
-      id: "5",
-      name: "Example burger",
-      description: "example description",
-      address: "Example Street 1",
-      website: "examplewebsite.com",
-    },
-  ];
-
-  return res.json(mockResponse);
+app.get("/burgers", async (req, res) => {
+  const burgers = await getAllBurgers();
+  return res.json(burgers);
 });
 
 const notFoundError = (req, res, next) => {
