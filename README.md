@@ -16,6 +16,14 @@ npm run seed
 npm run start
 ```
 
+This will start backend at address `http://localhost:3000`. Example requests are in `REQUESTS.http` and you can use [vscode rest client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to run them.
+
 ## Frontend
 
 Used [Vite](https://vitejs.dev/guide/) and `npm create vite@latest` to scaffold React project.
+
+```
+cd frontend
+npm install
+npm run dev
+```
