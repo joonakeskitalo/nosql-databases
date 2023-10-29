@@ -14,28 +14,28 @@ const mockData = [
     id: "2",
     name: "Example burger",
     description: "example description",
-    address: "Example Street 1",
+    address: "Example Street 2",
     website: "examplewebsite.com",
   },
   {
     id: "3",
     name: "Example burger",
     description: "example description",
-    address: "Example Street 1",
+    address: "Example Street 3",
     website: "examplewebsite.com",
   },
   {
     id: "4",
     name: "Example burger",
     description: "example description",
-    address: "Example Street 1",
+    address: "Example Street 4",
     website: "examplewebsite.com",
   },
   {
     id: "5",
     name: "Example burger",
     description: "example description",
-    address: "Example Street 1",
+    address: "Example Street 5",
     website: "examplewebsite.com",
   },
 ];
@@ -45,4 +45,3 @@ const seedMockData = async () => {
 };
 
 seedMockData();
-
