@@ -19,11 +19,41 @@ app.get("", (req, res) => {
 
 app.get("/burgers", (req, res) => {
   const mockResponse = [
-    { id: "1", name: "Example burger" },
-    { id: "2", name: "Example burger" },
-    { id: "3", name: "Example burger" },
-    { id: "4", name: "Example burger" },
-    { id: "5", name: "Example burger" },
+    {
+      id: "1",
+      name: "Example burger",
+      description: "example description",
+      address: "Example Street 1",
+      website: "examplewebsite.com",
+    },
+    {
+      id: "2",
+      name: "Example burger",
+      description: "example description",
+      address: "Example Street 1",
+      website: "examplewebsite.com",
+    },
+    {
+      id: "3",
+      name: "Example burger",
+      description: "example description",
+      address: "Example Street 1",
+      website: "examplewebsite.com",
+    },
+    {
+      id: "4",
+      name: "Example burger",
+      description: "example description",
+      address: "Example Street 1",
+      website: "examplewebsite.com",
+    },
+    {
+      id: "5",
+      name: "Example burger",
+      description: "example description",
+      address: "Example Street 1",
+      website: "examplewebsite.com",
+    },
   ];
 
   return res.json(mockResponse);

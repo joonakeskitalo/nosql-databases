@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-const Card = ({ id, name }) => {
+const Card = ({ name, description, website, address }) => {
   return (
     <div className="card">
-      {name} ({id})
+      <b>{name}</b>
+      <p>{description}</p>
+      <span>{address}</span>
+      <a href={website}>{website}</a>
     </div>
   );
 };
@@ -30,7 +33,7 @@ function App() {
     <>
       <h1>Burgers Feed</h1>
       {burgers?.map((x) => (
-        <Card key={x.id} name={x.name} id={x.id} />
+        <Card key={x.id} {...x} />
       ))}
     </>
   );
